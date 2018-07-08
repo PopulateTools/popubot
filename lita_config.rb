@@ -29,6 +29,8 @@ Lita.configure do |config|
 
   config.redis = { host: ENV["REDIS_HOST"], port: ENV["REDIS_PORT"] }
 
+  config.http.port = "9999"
+
   config.handlers.deploy.host = ENV["DEPLOY_BOT_HOST"]
   config.handlers.deploy.token = ENV["DEPLOY_BOT_TOKEN"]
 end
