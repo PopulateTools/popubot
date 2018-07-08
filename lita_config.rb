@@ -27,9 +27,7 @@ Lita.configure do |config|
   config.adapters.slack.unfurl_links = false
   config.adapters.slack.unfurl_media = false
 
-  ## Example: Set options for the Redis connection.
-  config.redis.host = ENV["REDIS_HOST"]
-  config.redis.port = ENV["REDIS_PORT"]
+  config.redis = { host: ENV["REDIS_HOST"], port: ENV["REDIS_PORT"] }
 
   config.handlers.deploy.host = ENV["DEPLOY_BOT_HOST"]
   config.handlers.deploy.token = ENV["DEPLOY_BOT_TOKEN"]
