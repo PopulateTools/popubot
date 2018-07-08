@@ -31,6 +31,12 @@ Lita.configure do |config|
 
   config.http.port = "9999"
 
+  # Deploy bot plugin
   config.handlers.deploy.host = ENV["DEPLOY_BOT_HOST"]
   config.handlers.deploy.token = ENV["DEPLOY_BOT_TOKEN"]
+
+  # Sensu plugin
+  config.handlers.sensu2.api_url = ENV["SENSU_API_URL"]
+  config.handlers.sensu2.api_port = ENV["SENSU_API_PORT"]
+  config.handlers.sensu2.domain = ENV["SENSU_DOMAIN"]
 end
