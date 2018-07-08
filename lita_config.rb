@@ -37,6 +37,6 @@ Lita.configure do |config|
 
   # Sensu plugin
   config.handlers.sensu2.api_url = ENV["SENSU_API_URL"]
-  config.handlers.sensu2.api_port = ENV["SENSU_API_PORT"]
+  config.handlers.sensu2.api_port = ENV["SENSU_API_PORT"].to_i
   config.handlers.sensu2.domain = ENV["SENSU_DOMAIN"]
 end
